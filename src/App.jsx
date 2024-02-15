@@ -30,10 +30,8 @@ function App() {
   return (
     <div className="App">
       <div className="slot">
-        {/* <h2>Executions</h2> */}
-        {/* Your input fields for executions slot */}
         <form onSubmit={handleSubmit}>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Public Address:</label>
             <input
               type="text"
@@ -41,7 +39,7 @@ function App() {
               onChange={(e) => setPublicAddress(e.target.value)}
             />
           </div>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Private Key:</label>
             <input
               type="password"
@@ -49,7 +47,7 @@ function App() {
               onChange={(e) => setPrivateKey(e.target.value)}
             />
           </div>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Node:</label>
             <input
               type="text"
@@ -57,7 +55,7 @@ function App() {
               onChange={(e) => setNode(e.target.value)}
             />
           </div>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Gas Limit:</label>
             <input
               type="text"
@@ -65,7 +63,7 @@ function App() {
               onChange={(e) => setGasLimit(e.target.value)}
             />
           </div>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Max Fee Per Gas:</label>
             <input
               type="text"
@@ -73,7 +71,7 @@ function App() {
               onChange={(e) => setGasPrice(e.target.value)}
             />
           </div>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Max Priority Fee Per Gas:</label>
             <input
               type="text"
@@ -81,7 +79,7 @@ function App() {
               onChange={(e) => setGasPrice(e.target.value)}
             />
           </div>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Gas Price:</label>
             <input
               type="text"
@@ -89,7 +87,7 @@ function App() {
               onChange={(e) => setGasPrice(e.target.value)}
             />
           </div>
-          <div className="label-input">
+          <div className="label-input input-container">
             <label>Trading Parameters:</label>
             <input
               type="text"
@@ -100,6 +98,45 @@ function App() {
           {/* <button type="submit">Submit</button> */}
         </form>
       </div>
+      <form>
+        <div className="mb-3">
+          <label for="exampleInputEmail1" className="form-label">
+            Email address
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" className="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div className="mb-3">
+          <label for="exampleInputPassword1" className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div className="mb-3 form-check">
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id="exampleCheck1"
+          />
+          <label className="form-check-label" for="exampleCheck1">
+            Check me out
+          </label>
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
       {/* <div className="slot">
         <h2>Buy Details</h2>
       </div>
